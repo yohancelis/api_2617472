@@ -10,7 +10,7 @@ class server {
     constructor() {
         this.app = express() //Utiliza el express
         this.port = process.env.PORT //Captura la variable del puerto para la conección
-        this.clientePath = '/api/client' //Ruta para la api usuario(Ruta pública)
+        this.clientePath = '/api/clientes' //Ruta para la api usuario(Ruta pública)
         this.middlewares()
         this.conectarDB() //Conectar a la base de datos
         this.routes()
@@ -23,10 +23,10 @@ class server {
     }
 
     middlewares(){
-        this.app.use(cookieParser()),
-        this.app.use(express.static(__dirname + "/public"))
-        this.app.use(cors())
-        this.app.use(bodyParser.json)
+        this.app.use(cookieParser()); 
+        this.app.use(express.static(__dirname + "/public"));
+        this.app.use( cors() );
+        this.app.use(bodyParser.json()) 
     }
 
     routes() {
