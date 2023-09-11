@@ -9,7 +9,7 @@ const ClienteSchema = Schema({
         //Valor único
         unique: true,
         //Requerido
-        required: [true, 'El nombre es obligatorio!']
+        required: [true, 'El usuario es obligatorio!']
     },
     nombre: {
         //Tipo cadena
@@ -17,15 +17,15 @@ const ClienteSchema = Schema({
         //Valor único
         unique: true,
         //Requerido
-        required: [true, 'El apellido es obligatorio!']
+        required: [true, 'El nombre es obligatorio!']
     },
     apellido: {
+        //Tipo cadena
         type: String,
-        required: [true, 'La contraseña es obligatoria!'],
-        //Longitud mínima en caracteres
-        minlength: [8, 'Debe tener mínimo 8 caracteres...'],
-        //Longitud máxima en caracteres
-        maxlength: [15, 'Debe tener máximo 15 caracteres']
+        //Valor único
+        unique: true,
+        //Requerido
+        required: [true, 'El apellido es obligatorio!']
     },
     correo: {
         //Tipo cadena
