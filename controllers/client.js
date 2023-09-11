@@ -18,7 +18,7 @@ const clienteGet = async(req, res = response) =>{
 //Método POST de la api
 const clientePost = async(req, res) => {
     let mensaje = 'Inserción Exitosa'
-    const body = req.query //Captura de atributos
+    const body = req.body //Captura de atributos
     try {
         const cliente = new Cliente(body) //Instanciando el objeto
         await cliente.save() //Inserta en la colección
@@ -34,7 +34,7 @@ const clientePost = async(req, res) => {
 //Modifcación
 const clientePut = async(req, res = response) => {
 
-    const {usuario,nombre, apellido, correo, telefono} = req.query
+    const {usuario,nombre, apellido, correo, telefono} = req.body
     let mensaje = 'Modificación exitosa'
     try{
          await Cliente.findOneAndUpdate({usuario: usuario}, 
