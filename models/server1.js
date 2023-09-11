@@ -10,7 +10,7 @@ class server {
     constructor() {
         this.app = express() //Utiliza el express
         this.port = process.env.PORT //Captura la variable del puerto para la conección
-        this.clientePath = '/api/cliente' //Ruta para la api usuario(Ruta pública)
+        this.clientePath = '/api/client' //Ruta para la api usuario(Ruta pública)
         this.middlewares()
         this.conectarDB() //Conectar a la base de datos
         this.routes()
