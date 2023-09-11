@@ -23,9 +23,10 @@ const ClienteSchema = Schema({
         unique: true,
         required: [true, 'El nombre es obligatorio']
     },
-    type: String,
-    unique: true,
-    required: [true, 'El nombre es obligatorio']
+    telefono: {
+        type: String,
+        unique: true,
+        required: [true, 'El nombre es obligatorio']
     },
 
 })
