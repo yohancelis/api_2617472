@@ -4,44 +4,28 @@ const { Schema, model } = require('mongoose')
 const ClienteSchema = Schema({
     //Atributos
     usuario: {
-        //Tipo cadena
         type: String,
-        //Valor único
         unique: true,
-        //Requerido
-        required: [true, 'El usuario es obligatorio!']
+        required: [true, 'El nombre es obligatorio']
     },
     nombre: {
-        //Tipo cadena
         type: String,
-        //Valor único
         unique: true,
-        //Requerido
-        required: [true, 'El nombre es obligatorio!']
+        required: [true, 'El nombre es obligatorio']
     },
     apellido: {
-        //Tipo cadena
         type: String,
-        //Valor único
         unique: true,
-        //Requerido
-        required: [true, 'El apellido es obligatorio!']
+        required: [true, 'El nombre es obligatorio']
     },
     correo: {
-        //Tipo cadena
         type: String,
-        //Valor único
         unique: true,
-        //Requerido
-        required: [true, 'El correo es obligatorio!']
+        required: [true, 'El nombre es obligatorio']
     },
-    telefono: {
-        //Tipo cadena
-        type: String,
-        //Valor único
-        unique: true,
-        //Requerido
-        required: [true, 'El telefono es obligatorio!']
+    type: String,
+    unique: true,
+    required: [true, 'El nombre es obligatorio']
     },
 
 })
